@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: restserver-pod
+  labels:
+    component: simplerestserver
+spec:
+  containers:
+    - name: restserverhelloserver
+      image: niranjansarkar/resthelloserver
+      ports:
+        - containerPort: 8080
