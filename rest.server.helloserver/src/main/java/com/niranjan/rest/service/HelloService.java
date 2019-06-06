@@ -11,10 +11,12 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/sayHello")
 public class HelloService {
+	
+	private static String SERVER_NAME = "SERVER_" + System.currentTimeMillis();
 
 	@GET
 	  @Produces(MediaType.TEXT_PLAIN)
 	  public String sayPlainTextHello() {
-	    return "Hello from test service - " + LocalDateTime.now();
+	    return "Hello from test service " + SERVER_NAME + " - " + LocalDateTime.now();
 	  }
 }
